@@ -179,11 +179,11 @@ public class Person implements Parcelable {
 
 ## 나의 결론 
 
-글이 너무 재밌어서 이렇게 까지 번역하여 올린다. 우선 나는 Parcelable이 왜 Serializable 보다 빠른 지 궁금했는데 그 이유는 리플렉션의 유무(리플렉션이 뭔지 정확히 모른다, 따로 공부해야 겠다)에 있었고 Serializable 인터페이스도 특정 클래스에 맞게 커스텀마이징하면 오히려 Parcelable 인터페이스보다 조금 더 성능이 좋음을 알 수 있었다. 역시, 개발은 이렇게 꼬리를 물어야 재밌나 보다.  
+글이 너무 재밌어서 이렇게까지 번역하여 올린다. 우선 나는 Parcelable이 왜 Serializable보다 빠른지 궁금했는데 그 이유는 **리플렉션의 유무**(리플렉션이 뭔지 정확히 모른다, 따로 공부해야 겠다)에 있었고 **Serializable 인터페이스도 특정 클래스에 맞게 커스텀마이징하면** 오히려 Parcelable 인터페이스보다 조금 더 성능이 좋음을 알 수 있었다. 역시, 개발은 이렇게 꼬리를 물어야 재밌나 보다.  
 
 # Reference 
-https://bitbucket.org/afrishman/androidserializationtest/src/default/
-1. 필립 브레오(Philippe Breault)의 테스트 결과https://bitbucket.org/afrishman/androidserializationtest/src/default/
+
+1. 필립 브레오(Philippe Breault)의 테스트 결과
 <br>: http://www.developerphil.com/parcelable-vs-serializhttps://bitbucket.org/afrishman/androidserializationtest/src/default/able/?source=post_page---------------------------
 
 2. BitBucket 프로젝트
