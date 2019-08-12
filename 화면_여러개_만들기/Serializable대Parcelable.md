@@ -169,7 +169,7 @@ public class Person implements Parcelable {
  private void readObjectNoData()
      throws ObjectStreamException;
 ```
-: **강렬하군! 짜릿해! 늘 새로워!** 그러나 위의 코드가 Serialhttps://bitbucket.org/afrishman/androidserializationtest/src/default/zable의 커스텀마이징 방식입니다. 이제 이 두 가지의 메소드로 Serializhttps://bitbucket.org/afrishman/androidserializationtest/src/default/ble 인터페이스를 커스텀마이징 할 수 있습니다. 만약에 올바르게 작동한다면 , dehttps://bitbucket.org/afrishman/androidserializationtest/src/default/ault한 Serializable 접근법이 연관된 쓰레기는 더이상 고려 대상이 아닙니다! 
+: **강렬하군! 짜릿해! 늘 새로워!** 이제 이 두 가지의 메소드로 Serializable 인터페이스를 커스텀마이징 할 수 있습니다. 만약에 올바르게 작동한다면 , default한 Serializable 접근법이 연관된 쓰레기는 더이상 고려 대상이 아닙니다! 
 
 : 이제서야 Parcelable 과 **custom된** Serializable의 서로 비교가 공평해보이는 군요! 이 결과는 매우 놀랍습니다! 한 데이터에 따르면, custom 된 Serializable 접근법이 Parcelable 보다 쓰기 속도가 3배 이상, 읽기 속도가 1.6배 이상 빠릅니다. 해당 데이터는 Reference 섹션에서 테스트 데이터가 포함된 BitBucket 프로젝트에서 찾을 수 있습니다. 
 
