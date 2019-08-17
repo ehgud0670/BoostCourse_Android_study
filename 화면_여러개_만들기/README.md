@@ -4,4 +4,4 @@
 
 * 인텐트
 * 부가데이터
-
+* Serializable vs Parcelable
