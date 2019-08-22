@@ -36,6 +36,5 @@ Gson gson = new GsonBuilder().setPrettyPrinting().create();
 도움얻은 사이트 : <br>
 1. https://ko.wikipedia.org/wiki/JSON
 2. https://ko.wikipedia.org/wiki/Gson
-3. https://github.com/june0122/TIL/blob/master/JAVA/LAB/0607.md
-4. https://www.json.org/json-ko.html
+3. https://www.json.org/json-ko.html
 
