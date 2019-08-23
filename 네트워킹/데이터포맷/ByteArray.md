@@ -5,7 +5,8 @@
 
 ### 데이터를 따로따로 보내는게 아니라 ByteArray로 보내는 이유 
 
-: 서로 관련되어 있는 데이터( ex : 3 + 5 )들을 따로 보낼때 context switch 때문에 미처 데이터를 보내지 못하면, 못 보낸 데이터 때문에 상대편에서 작업을 제대로 못하는 경우가 생기게 된다.<br>따라서 온전한 패킷으로 보내는 것이 좋으므로 , 서로 연관된 데이터들을 ByteArray에 넣어 한꺼번에 보내는 것이 옳다.
+: 입출력을 요청하면 context switch가 일어나 cpu의 권한은 다른 프로세스로 넘어가게 된다. 근데 context switch를 할 때마다 running 했던 프로세스의 상태를 PCB에 저장해야 하는데 이 행동은 부담이 크고 따라서 context switch를 많이 하는 경우, 성능 저하의 이슈가 생기게 된다. 따라서 ByteArray에 다 넣어 한번에 보내서 context switch를 줄이는 것이 옳다.  
+<br>: 서로 관련되어 있는 데이터( ex : 3 + 5 )들을 따로 보낼때 context switch 때문에 미처 데이터를 보내지 못하면, 못 보낸 데이터 때문에 상대편에서 작업을 제대로 못하는 경우가 있을 것 같다.<br>따라서 온전한 패킷으로 보내는 것이 좋으므로 , 서로 연관된 데이터들을 ByteArray에 넣어 한꺼번에 보내는 것이 옳다.
 
 ```java 
 ByteArrayOutputStream bos = new ByteArrayOutputStream(1024);
